@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
+import { Navigation } from "./components/nav";
 
 const navigation = [
 	{ name: "Projects", href: "/projects" },
@@ -10,6 +11,7 @@ const navigation = [
 export default function Home() {
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+			<Navigation/>
 			<nav className="my-16 animate-fade-in">
 				<ul className="flex items-center justify-center gap-4">
 					{navigation.map((item) => (
@@ -35,24 +37,24 @@ export default function Home() {
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
 				<h2 className="text-sm text-zinc-500 ">
-					Hi, my name is Shubham Pandey, I'm building serverless and open source
+					Hi, my name is Shubham Pandey, I'm building full stack application
 					solutions at{" "}
 					<Link
 						target="_blank"
-						href="https://upstash.com"
+						href="https://amazon.com"
 						className="underline duration-500 hover:text-zinc-300"
 					>
-						Upstash
+						Amazon
 					</Link>
 
 					<br />
 					and working on{" "}
 					<Link
 						target="_blank"
-						href="https://unkey.dev"
+						href="https://zetone.in"
 						className="underline duration-500 hover:text-zinc-300"
 					>
-						unkey.dev
+						zetone
 					</Link>{" "}
 					at night.
 				</h2>
