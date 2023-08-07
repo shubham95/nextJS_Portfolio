@@ -7,28 +7,28 @@ import { Card } from "../components/card";
 const socials = [
 	{
 		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
+		href: "https://twitter.com/yettoadd",
 		label: "Twitter",
-		handle: "@chronark_",
+		handle: "@yettoadd",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		href: "mailto:shubham95pandey@gmail.com ",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "shubham95pandey@gmail.com",
 	},
 	{
 		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
+		href: "https://github.com/shubham95",
 		label: "Github",
-		handle: "chronark",
+		handle: "shubham95",
 	},
 ];
 
 export default function Example() {
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
-			<Navigation />
+			<Navigation showBackButton={true}/>
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s) => (

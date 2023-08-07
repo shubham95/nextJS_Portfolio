@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-export const Navigation: React.FC = () => {
+export const Navigation: React.FC = (showBackButton: Boolean) => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
 
@@ -40,14 +40,33 @@ export const Navigation: React.FC = () => {
 						>
 							Contact
 						</Link>
+						<Link
+							href="/blogs"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							Blogs
+						</Link>
+						<Link
+							href="/books"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							Books
+						</Link>
+						<Link
+							href="/video"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							Videos
+						</Link>
 					</div>
-
-					<Link
-						href="/"
-						className="duration-200 text-zinc-300 hover:text-zinc-100"
-					>
-						<ArrowLeft className="w-6 h-6 " />
-					</Link>
+					{	showBackButton &&
+						<Link
+							href="/"
+							className="duration-200 text-zinc-300 hover:text-zinc-100"
+						>
+							<ArrowLeft className="w-6 h-6 " />
+						</Link>
+					}
 				</div>
 			</div>
 		</header>
